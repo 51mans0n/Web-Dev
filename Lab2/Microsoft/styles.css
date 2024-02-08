@@ -25,7 +25,6 @@ body{
 .header__container {
     display: flex;
     height: 54px;
-    margin-bottom: 2px;
     overflow-x: visible;
     box-sizing: inherit;
     padding: 0 5%;
@@ -146,7 +145,7 @@ body{
 
 .showcase__text {
     padding: 24px 24px 16px 24px;
-    width: calc(100% - 49.8px);
+    width: calc(100% - 50px);
     height: 100%;
     margin-left: 5px;
     text-align: left;
@@ -242,8 +241,8 @@ h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
     }
 
     .nav__list{
-        width: 179.550;
-        height: 54.1px;
+        width: 180px;
+        height: 54px;
     }
 
     .nav__product{
@@ -259,7 +258,7 @@ h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
     }
 
     .nav__product span{
-        width: 137.9px;
+        width: 138px;
         flex-wrap: nowrap;
         line-height: 10px;
         margin-right:2px;
@@ -268,7 +267,6 @@ h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
 
     .fas.fa-angle-down{
         position: relative;
-        /* margin-left: 1px; */
         left: 12px;
     }
 
@@ -357,7 +355,7 @@ a{
     margin-bottom: 20px;
 }
 .cart-item {
-    max-width: 350.09px;
+    max-width: 350px;
 }
 .cart-item_blue {
     background-color: aqua;
@@ -409,17 +407,13 @@ a{
     background: #f2f2f2;
 }
 .footer__container {
-    margin-top: 48px;
     display: flex;
-    margin-bottom: 2px;
     overflow-x: visible;
     box-sizing: inherit;
     padding: 0 5%;
     max-width: calc(1600px + 10%);
     margin: 0 auto;
     flex-direction: column;
-    box-sizing: inherit;
-
 }
 
 .footer__footer{
@@ -521,7 +515,7 @@ a{
     .footer__ln-nav{
         display: flex;
         flex-wrap: nowrap;
-        padding: 30px 10px 16px 0px;
+        padding: 30px 10px 16px 0;
         flex-direction: column;
         justify-content: flex-start;
     }
@@ -537,7 +531,7 @@ a{
 
 @media only screen and (min-width: 1084px){
     .showcase img{
-        content: url('file:///D:/kbtu_4semestr/webDev/lab2/imgs/1399.jpeg');
+        content: url('source/1399.jpeg');
         width: calc(100% - 10px);
     }
 
@@ -561,7 +555,7 @@ a{
     }
 
     .container__navigation{
-        width: 275.550px;
+        width: 275px;
     }
 
     .nav__search{
@@ -602,7 +596,7 @@ a{
     .container__navigation{
         display: flex;
         align-items: center;
-        width: 380.062px;
+        width: 380px;
         height: 54px;
     }
 
@@ -624,16 +618,16 @@ a{
     }
 
     .showcase img {
-        content: url('file:///D:/kbtu_4semestr/webDev/lab2/imgs/1920.jpeg');
+        content: url('source/1920.jpeg');
         width: calc(100% - 10px);
         max-width: 1920px;
     }
 
     .showcase__container {
         position: relative;
-        max-width: 666.662px;
+        max-width: 666px;
         width: 536px;
-        min-height: 351.6px;
+        min-height: 351px;
         height: 340px;
         margin-right: -40%;
         box-shadow: none;
@@ -672,7 +666,6 @@ a{
 
     .footer__footer h1{
         padding: 36px 0 4px;
-        padding-left: 40px;
         width: 100%;
     }
 
@@ -790,7 +783,7 @@ a{
     }
 
     .cart-item {
-        max-width: 350.09px;
+        max-width: 350px;
     }
 }
 ul{

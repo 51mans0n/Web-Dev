@@ -82,7 +82,7 @@ button.create-account {
     margin-left: 50px;
 }
 
-hr#border {
+#border {
     background-color: #dddfe2;
     border: none;
     height: 1px;
@@ -109,10 +109,12 @@ main p {
     margin-left: 25px;
 }
 footer {
-    background-color: #f0f2f5;
+    background-color: #ffffff;
+    color: #A0A0A0;
     border-top: 1px solid #dddfe2;
     padding: 20px 0;
-    position: absolute;
+    font-size: 12px;
+    position: relative;
     bottom: 0;
     width: 100%;
 }
@@ -137,19 +139,6 @@ footer {
     text-decoration: none;
     color: #A0A0A0;
     font-size: 12px;
-}
-
-.footer-links li:not(:last-child):after {
-    content: "  ";
-    margin-left: 10px;
-}
-footer {
-    background-color: #ffffff;
-    color: #A0A0A0;
-    padding: 20px 0;
-    font-size: 12px;
-    position: relative;
-    width: 100%;
 }
 
 .footer-container {
@@ -180,10 +169,6 @@ footer {
     margin: 10px 0;
 }
 
-.footer-links a:not(:last-child):after {
-    content: "   ";
-    color: #A0A0A0;
-}
 #more-languages {
     display: inline-block;
     border: 1px solid rgba(192, 192, 192, 0.8);
