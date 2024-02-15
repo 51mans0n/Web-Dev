@@ -1,58 +1,68 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Обработчик для существующих кнопок удаления
-    document.querySelectorAll('.delete').forEach(function(button) {
-        button.addEventListener('click', function() {
-            this.parentElement.remove();
+    function saveTasks() {
+        const tasks = document.querySelectorAll('.todo-list li');
+        const tasksData = Array.from(tasks).map(task => {
+            return {
+                text: task.querySelector('label').textContent,
+                completed: task.querySelector('input').checked
+            };
         });
-    });
+        localStorage.setItem('tasks', JSON.stringify(tasksData));
+    }
 
-    // Обработчик для существующих чекбоксов
-    document.querySelectorAll('.todo-list input[type="checkbox"]').forEach(function(checkbox) {
+    function loadTasks() {
+        const tasksData = JSON.parse(localStorage.getItem('tasks'));
+        if (tasksData) {
+            tasksData.forEach(taskData => {
+                addTask(taskData.text, taskData.completed);
+            });
+        }
+    }
+
+    function addTask(text, completed) {
+        const listItem = document.createElement('li');
+        const checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        checkbox.checked = completed;
+        const label = document.createElement('label');
+        label.textContent = text;
+        if (completed) {
+            label.classList.add('completed');
+        }
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = '🗑️';
+        deleteButton.className = 'delete';
+
         checkbox.addEventListener('change', function() {
             if (this.checked) {
-                this.nextSibling.classList.add('completed');
+                label.classList.add('completed');
             } else {
-                this.nextSibling.classList.remove('completed');
+                label.classList.remove('completed');
             }
+            saveTasks();
         });
-    });
 
-    // Обработчик для кнопки добавления новой задачи
+        deleteButton.addEventListener('click', function() {
+            listItem.remove();
+            saveTasks();
+        });
+
+        listItem.appendChild(checkbox);
+        listItem.appendChild(label);
+        listItem.appendChild(deleteButton);
+        document.querySelector('.todo-list').appendChild(listItem);
+    }
+
     document.getElementById('add-task').addEventListener('click', function() {
-        const taskList = document.querySelector('.todo-list');
         const newTaskInput = document.getElementById('new-task');
         const newTask = newTaskInput.value.trim();
 
         if (newTask) {
-            const listItem = document.createElement('li');
-            const checkbox = document.createElement('input');
-            checkbox.type = 'checkbox';
-            const label = document.createElement('label');
-            const deleteButton = document.createElement('button');
-
-            // Настройка и добавление обработчика для нового чекбокса
-            checkbox.addEventListener('change', function() {
-                if (this.checked) {
-                    label.classList.add('completed');
-                } else {
-                    label.classList.remove('completed');
-                }
-            });
-
-            // Настройка и добавление обработчика для новой кнопки удаления
-            deleteButton.textContent = '🗑️';
-            deleteButton.className = 'delete';
-            deleteButton.addEventListener('click', function() {
-                listItem.remove();
-            });
-
-            label.appendChild(document.createTextNode(newTask));
-            listItem.appendChild(checkbox);
-            listItem.appendChild(label);
-            listItem.appendChild(deleteButton);
-            taskList.appendChild(listItem);
-
-            newTaskInput.value = ''; // Очищаем поле ввода после добавления задачи
+            addTask(newTask, false);
+            saveTasks();
+            newTaskInput.value = '';
         }
     });
+
+    loadTasks();
 });
