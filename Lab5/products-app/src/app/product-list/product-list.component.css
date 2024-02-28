@@ -1,0 +1,8 @@
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Установите зазор между карточками */
+  margin: 0 auto;
+  padding: 20px;
+}

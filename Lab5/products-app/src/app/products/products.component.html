@@ -1,21 +1,8 @@
-<div class="product-list">
-  <div class="product" *ngFor="let product of products; let i = index">
-    <div class="product-image-gallery">
-      <img [src]="product.image[selectedImageIndex[i] || 0]" alt="{{ product.name }}">
-      <div class="gallery-controls">
-        <button *ngFor="let img of product.image; let j = index" (click)="selectImage(i, j)">
-          {{ j + 1 }}
-        </button>
-      </div>
-    </div>
-    <div class="product-details">
-      <h3>{{ product.name }}</h3>
-      <div *ngFor="let line of getDescriptionArray(product.description)">
-        <p>{{ line }}</p>
-      </div>
-      <p>Rating: {{ product.rating }}⭐</p>
-      <a [href]="product.link" target="_blank">View on Kaspi.kz</a>
-      <button (click)="share(product.link)">Share in Telegram</button>
-    </div>
-  </div>
+<div class="category-buttons">
+  <button class="category-button" [class.active]="activeCategoryIndex === 0" (click)="toggleCategory(0)">Fender guitar</button>
+  <button class="category-button" [class.active]="activeCategoryIndex === 1" (click)="toggleCategory(1)">Les Paul guitar</button>
+  <button class="category-button" [class.active]="activeCategoryIndex === 2" (click)="toggleCategory(2)">Lava music</button>
+  <button class="category-button" [class.active]="activeCategoryIndex === 3" (click)="toggleCategory(3)">Acoustic guitar</button>
 </div>
+
+<app-product-list *ngIf="activeCategoryIndex !== null" [products]="categories[activeCategoryIndex].products"></app-product-list>

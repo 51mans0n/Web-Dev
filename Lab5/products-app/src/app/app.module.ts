@@ -4,11 +4,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductsComponent } from './products/products.component';
+import { ProductListComponent } from './product-list/product-list.component';
+import { ProductItemComponent } from './product-item/product-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductsComponent
+    ProductsComponent,
+    ProductListComponent,
+    ProductItemComponent
   ],
   imports: [
     BrowserModule,
@@ -18,15 +22,4 @@ import { ProductsComponent } from './products/products.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-export interface Category {
-  name: string;
-  products: Product[];
-}
 
-export interface Product {
-  image: string[];
-  name: string;
-  description: string;
-  rating: number;
-  link: string;
-}

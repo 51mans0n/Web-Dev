@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Category } from './category';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'products-app';
+  categories: Category[] = [];
+  selectedCategory?: Category;
+
+  selectCategory(category: Category): void {
+    this.selectedCategory = category;
+  }
+  activeCategoryIndex: number | null = null;
+
+  toggleCategory(index: number): void {
+    this.activeCategoryIndex = this.activeCategoryIndex === index ? null : index;
+  }
 }

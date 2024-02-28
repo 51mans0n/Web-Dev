@@ -1,0 +1,23 @@
+<div class="product">
+  <div class="product-image-gallery">
+    <img [src]="product.image[selectedImageIndex]" alt="{{ product.name }}">
+    <div class="gallery-controls">
+      <button class="pick-img" *ngFor="let img of product.image; let idx = index" (click)="selectImage(idx)">
+        {{ idx + 1 }}
+      </button>
+    </div>
+  </div>
+
+  <div class="like-container" (click)="toggleLike()">
+    <div class="like-image"></div>
+    <span class="like-count">{{ product.likes }}</span>
+  </div>
+
+  <div class="product-details">
+    <h3>{{ product.name }}</h3>
+    <p *ngFor="let line of getDescriptionArray(product.description)">{{ line }}</p>
+    <p class="rating">Rating: {{ product.rating }}⭐</p>
+    <a class="action-button" [href]="product.link" target="_blank">View on Kaspi.kz</a>
+    <button class="action-button share-telegram" (click)="share(product.link)">Share in Telegram</button>
+  </div>
+</div>
