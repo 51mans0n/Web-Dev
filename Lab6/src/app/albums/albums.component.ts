@@ -17,7 +17,9 @@ export class AlbumsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.getAlbums();
+    this.albumsService.getAlbums().subscribe((albums) => {
+      this.albums = albums;
+    });
   }
 
   getAlbums(): void {
@@ -43,11 +45,9 @@ export class AlbumsComponent implements OnInit {
   }
 
   deleteAlbum(albumId: number): void {
-    const deletedAlbumIndex = this.albums.findIndex(album => album.id === albumId);
-    if (deletedAlbumIndex !== -1) {
-      this.albumsService.deleteAlbum(albumId).subscribe(() => {
-        this.albums.splice(deletedAlbumIndex, 1);
-      });
-    }
+    this.albumsService.deleteAlbum(albumId).subscribe(() => {
+      this.albums = this.albums.filter(album => album.id !== albumId);
+    });
   }
+
 }

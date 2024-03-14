@@ -5,7 +5,6 @@
   
   <ul>
     <li *ngFor="let album of albums">
-      <!-- <span>{{ album.title }}</span> -->
       <a [title]="album.title + ' details'" [routerLink]="['/albums', album.id]">
         {{album.title}}
     </a>
