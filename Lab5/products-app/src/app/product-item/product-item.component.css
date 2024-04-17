@@ -1,0 +1,113 @@
+.product {
+  border: 1px solid #e1e1e1;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: auto;
+  width: 450px;
+}
+
+.product-image-gallery {
+  width: 100%;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.product-image-gallery img {
+  width: auto;
+  max-height: 300px;
+  object-fit: contain;
+}
+.product-details p {
+  margin: 15px 0;
+}
+
+.product-details {
+  font-size: 1rem;
+  color: #666;
+  line-height: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 15px;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.like-container {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.like-image {
+  background-image: url('https://pngimg.com/d/heart_PNG51335.png');
+  width: 24px;
+  height: 24px;
+  background-size: cover;
+}
+
+.like-count {
+  margin-left: 5px;
+}
+
+.product-details a,
+.product-details button {
+  margin-bottom: 10px;
+}
+.product-details button {
+  padding: 10px 0;
+
+}
+.action-button {
+  display: block;
+  margin: 10px auto;
+  padding: 10px 15px;
+  background-color: #FF0000;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  width: auto;
+  box-sizing: border-box;
+}
+.action-button:hover {
+  background-color: #B90000;
+}
+
+.share-telegram {
+  background-color: #28a745;
+  width: 250px;
+  height: auto;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+}
+
+.share-telegram:hover {
+  background-color: #218838;
+}
+.product-details .description {
+  margin-bottom: 10px;
+}
+
+.product-details .rating {
+  margin-bottom: 10px;
+}
+.pick-img {
+  padding: 0 5px;
+  margin: 0 5px;
+}

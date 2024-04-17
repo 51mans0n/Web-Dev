@@ -1,4 +1,3 @@
-<!-- products.component.html -->
 <div class="product-list">
   <div class="product" *ngFor="let product of products; let i = index">
     <div class="product-image-gallery">
@@ -11,8 +10,10 @@
     </div>
     <div class="product-details">
       <h3>{{ product.name }}</h3>
-      <p>{{ product.description }}</p>
-      <p>Rating: {{ product.rating }}</p>
+      <div *ngFor="let line of getDescriptionArray(product.description)">
+        <p>{{ line }}</p>
+      </div>
+      <p>Rating: {{ product.rating }}⭐</p>
       <a [href]="product.link" target="_blank">View on Kaspi.kz</a>
       <button (click)="share(product.link)">Share in Telegram</button>
     </div>

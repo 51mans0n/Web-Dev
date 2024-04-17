@@ -1,0 +1,8 @@
+<div class="category-buttons">
+  <button class="category-button" [class.active]="activeCategoryIndex === 0" (click)="toggleCategory(0)">Fender guitar</button>
+  <button class="category-button" [class.active]="activeCategoryIndex === 1" (click)="toggleCategory(1)">Les Paul guitar</button>
+  <button class="category-button" [class.active]="activeCategoryIndex === 2" (click)="toggleCategory(2)">Lava music</button>
+  <button class="category-button" [class.active]="activeCategoryIndex === 3" (click)="toggleCategory(3)">Acoustic guitar</button>
+</div>
+
+<app-product-list *ngIf="activeCategoryIndex !== null" [products]="categories[activeCategoryIndex].products"></app-product-list>
