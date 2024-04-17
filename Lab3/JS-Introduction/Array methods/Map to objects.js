@@ -18,4 +18,5 @@ usersMapped = [
 */
 
 alert( usersMapped[0].id ); // 1
+
 alert( usersMapped[0].fullName ); // John Smith
