@@ -1,5 +1,5 @@
-def caught_speeding(speed, is_birthday):
-    if is_birthday:
+<<<<<<< HEADdef caught_speeding(speed, is_birthday):
+    if is_brthday:
         speed -= 5
     if speed <= 60:
         return 0
@@ -7,3 +7,4 @@ def caught_speeding(speed, is_birthday):
         return 2
     elif 80 >= speed >= 61:
         return 1
+

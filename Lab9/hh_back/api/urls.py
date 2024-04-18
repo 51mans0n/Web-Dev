@@ -10,4 +10,3 @@ urlpatterns = [
     path('vacancies/<int:id>/', VacancyDetail.as_view(), name='vacancy-detail'),
     path('vacancies/top_ten/', TopTenVacanciesList.as_view(), name='top-ten-vacancies'),
 ]
-

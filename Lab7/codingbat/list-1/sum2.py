@@ -5,3 +5,4 @@ def sum2(nums):
         return nums[0]
     else:
         return 0
+

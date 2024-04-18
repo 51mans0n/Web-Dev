@@ -7,3 +7,4 @@ def sum13(nums):
             continue
         sum += nums[i]
     return sum
+

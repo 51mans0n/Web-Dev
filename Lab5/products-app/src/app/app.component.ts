@@ -19,3 +19,4 @@ export class AppComponent {
     this.activeCategoryIndex = this.activeCategoryIndex === index ? null : index;
   }
 }
+

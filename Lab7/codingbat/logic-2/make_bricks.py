@@ -6,3 +6,4 @@ def make_bricks(small, big, goal):
         return goal <= small
     goal -= big * 5
     return goal <= small
+

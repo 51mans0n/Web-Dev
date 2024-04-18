@@ -12,4 +12,5 @@ export class AlbumPhoto {
         this.url = url;
         this.thumbnailUrl = thumbnailUrl;
     }
+
 }

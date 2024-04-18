@@ -3,3 +3,4 @@ def string_splosion(str):
     for i in range(len(str)):
         res += str[:i + 1]
     return res
+

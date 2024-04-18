@@ -5,3 +5,4 @@ export interface Product {
   rating: number;
   link: string;
 }
+

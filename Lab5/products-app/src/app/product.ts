@@ -7,3 +7,4 @@ export interface Product {
   likes: number;
   likedByUser: boolean;
 }
+

@@ -34,3 +34,4 @@ export class ProductItemComponent implements OnInit {
     window.open(telegramUrl, '_blank');
   }
 }
+

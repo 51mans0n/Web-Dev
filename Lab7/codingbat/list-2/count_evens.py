@@ -4,3 +4,4 @@ def count_evens(nums):
         if i % 2 == 0:
             cnt += 1
     return cnt
+

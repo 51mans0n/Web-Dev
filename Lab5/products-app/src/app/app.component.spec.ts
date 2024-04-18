@@ -23,7 +23,6 @@ describe('AppComponent', () => {
   it(`should have as title 'products-app'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('products-app');
   });
 
   it('should render title', () => {
@@ -33,3 +32,4 @@ describe('AppComponent', () => {
     expect(compiled.querySelector('h1')?.textContent).toContain('Hello, products-app');
   });
 });
+

@@ -6,3 +6,4 @@ def lucky_sum(a, b, c):
             break
         s += n[i]
     return s
+

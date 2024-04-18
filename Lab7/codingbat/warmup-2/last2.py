@@ -7,3 +7,4 @@ def last2(str):
         if str[i:i + 2] == t:
             cnt += 1
     return cnt
+

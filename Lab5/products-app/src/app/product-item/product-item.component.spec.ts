@@ -11,7 +11,7 @@ describe('ProductItemComponent', () => {
       declarations: [ProductItemComponent]
     })
     .compileComponents();
-    
+
     fixture = TestBed.createComponent(ProductItemComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
@@ -21,3 +21,4 @@ describe('ProductItemComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+

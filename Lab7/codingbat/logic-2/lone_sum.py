@@ -9,3 +9,4 @@ def lone_sum(a, b, c):
         return 0
     if a == b and a != c and b != c:
         return c
+

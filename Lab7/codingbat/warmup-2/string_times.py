@@ -3,3 +3,4 @@ def string_times(str, n):
     for i in range(n):
         res += str
     return res
+

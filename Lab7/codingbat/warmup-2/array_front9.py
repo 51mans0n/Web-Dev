@@ -3,3 +3,4 @@ def array_front9(nums):
         if nums[i] == 9:
             return True
     return False
+

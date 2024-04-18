@@ -3,3 +3,4 @@ def front_times(str, n):
     for i in range(n):
         res += str[:3]
     return res
+

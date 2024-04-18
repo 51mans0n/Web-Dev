@@ -4,3 +4,4 @@ def date_fashion(you, date):
     if you >= 8 or date >= 8:
         return 2
     return 1
+

@@ -269,3 +269,4 @@ export class ProductsComponent implements OnInit {
     window.open(`https://t.me/share/url?url=${encodeURIComponent(link)}`, '_blank');
   }
 }
+

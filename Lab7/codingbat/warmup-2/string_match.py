@@ -5,3 +5,4 @@ def string_match(a, b):
         if a[i:i + 2] == b[i:i + 2]:
             cnt += 1
     return cnt
+

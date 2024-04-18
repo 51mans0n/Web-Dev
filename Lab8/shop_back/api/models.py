@@ -10,4 +10,3 @@ class Product(models.Model):
     count = models.IntegerField()
     is_active = models.BooleanField(default=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='products')
-

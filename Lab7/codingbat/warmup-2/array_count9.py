@@ -4,3 +4,4 @@ def array_count9(nums):
         if i == 9:
             cnt += 1
     return cnt
+

@@ -11,3 +11,4 @@ def sum67(nums):
         elif isOk:
             sum += i
     return sum
+
